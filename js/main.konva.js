@@ -56,30 +56,30 @@ function reset (){
 	stage.clearCache();
 }
 
-// function createInfoBox (input){
-// 	var info = new Konva.Label({opacity: 0.75});
+function createInfoBox (input){
+	var info = new Konva.Label({opacity: 0.75});
 
-// 	//Cores e tal
-// 	info.add(new Konva.Tag({
-// 		fill: 'black',
-// 		pointerDirection: 'down',
-// 		pointerWidth: 10,
-// 		pointerHeight: 10,
-// 		lineJoin: 'round',
-// 		shadowColor: 'black',
-// 		shadowBlur: 10,
-// 		shadowOffset: 10,
-// 		shadowOpacity: 0.5
-// 	}));
+	//Cores e tal
+	info.add(new Konva.Tag({
+		fill: 'black',
+		pointerDirection: 'down',
+		pointerWidth: 10,
+		pointerHeight: 10,
+		lineJoin: 'round',
+		shadowColor: 'black',
+		shadowBlur: 10,
+		shadowOffset: 10,
+		shadowOpacity: 0.5
+	}));
 
-// 	//Texto
-// 	info.add(new Konva.Text({
-// 		text: input, //Texto de Entrada
-// 		fontFamily: 'Calibri',
-// 		fontSize: 18,
-// 		padding: 5,
-// 		fill: 'white'
-// 	}));
+	//Texto
+	info.add(new Konva.Text({
+		text: input, //Texto de Entrada
+		fontFamily: 'Calibri',
+		fontSize: 18,
+		padding: 5,
+		fill: 'white'
+	}));
 
-// 	return info;
-// }
+	return info;
+}
