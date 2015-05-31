@@ -12,15 +12,6 @@ var stage = new Konva.Stage({
 	draggable: true
 });
 
-//Redimensiona a página e o Stage
-window.addEventListener('resize',function(){
-	width = window.innerWidth; //Largura
-	height = window.innerHeight; //Altura
-	stage.width(width);
-	stage.height(height);
-},false);
-
-
 var centerX = stage.getWidth()/2;
 var centerY = stage.getHeight()/2;
 
@@ -40,13 +31,23 @@ var circle = new Konva.Circle({
 
 // Informação
 var infoLabel = createInfoBox("Informação");
+infoLabel.position({x:circle.x()+50, y:circle.y()-15});
 
+infoLayer.add(infoLabel);
 shapeLayer.add(circle);
 stage.add(shapeLayer);
+stage.add(infoLayer);
 
+shapeLayer.on("click",function(e){toggleVisibility(infoLabel,infoLayer);});
+shapeLayer.on("tap",function(e){toggleVisibility(infoLabel,infoLayer);});
 
-document.getElementById("reset").addEventListener("click",function(){
-	reset();
+document.getElementById("reset").addEventListener("click",reset,false);
+
+//Redimensiona a página e o Stage
+window.addEventListener('resize',function(){
+	width = window.innerWidth; //Largura
+	height = window.innerHeight; //Altura
+	stage.position({x: width, y: height});
 },false);
 
 function reset (){
@@ -57,7 +58,7 @@ function reset (){
 }
 
 function createInfoBox (input){
-	var info = new Konva.Label({opacity: 0.75});
+	var info = new Konva.Label({x:0,y:0,opacity: 0.75});
 
 	//Cores e tal
 	info.add(new Konva.Tag({
@@ -80,6 +81,11 @@ function createInfoBox (input){
 		padding: 5,
 		fill: 'white'
 	}));
-
+	info.hide();
 	return info;
+}
+
+function toggleVisibility (input,layer){
+	input.isVisible()? input.hide() : input.show();
+	layer.draw();
 }
