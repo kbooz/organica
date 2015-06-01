@@ -1,6 +1,0 @@
-#!/usr/bin/env bash
-# bin/detect <build-dir>
-
-# Nothing is required
-
-echo "Static"
