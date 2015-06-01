@@ -1,14 +1,11 @@
-var width = window.innerWidth; //Largura
-var height = window.innerHeight; //Altura
-
 /*Konva:
 Stage --> Camada --> Objeto */
 
 //Cria um novo Stage (container do canvas)
 var stage = new Konva.Stage({
 	container: 'container',
-	width: width,
-	height: height,
+	width: getSize()["width"],
+	height: getSize()["height"],
 	draggable: true
 });
 
@@ -45,9 +42,8 @@ document.getElementById("reset").addEventListener("click",reset,false);
 
 //Redimensiona a página e o Stage
 window.addEventListener('resize',function(){
-	width = window.innerWidth; //Largura
-	height = window.innerHeight; //Altura
-	stage.position({x: width, y: height});
+	console.log(getSize()["width"]+" "+getSize()["height"]);
+	stage.setAttrs({width: getSize()["width"], height: getSize()["height"]});
 },false);
 
 function reset (){
@@ -88,4 +84,12 @@ function createInfoBox (input){
 function toggleVisibility (input,layer){
 	input.isVisible()? input.hide() : input.show();
 	layer.draw();
+}
+
+//Pega a largura e a altura da página. Funciona em mobiles e browsers
+function getSize(){
+	var size = {}
+	size["height"] = "innerHeight" in window ? window.innerHeight : document.documentElement.offsetHeight; 
+	size["width"] = "innerWidth" in window ? window.innerWidth : document.documentElement.offsetWidth;
+	return size;
 }
