@@ -12,5 +12,9 @@ var s = skrollr.init({
 
 $("#up").click(function (){
 	console.log($("#slide1").offset().top);
-	$("body").scrollTop($("#slide1").offset().top);
+	$("body").scrollTop(0);
+});
+
+$("#down").click(function (){
+	$("body").scrollTop(1510);
 });
