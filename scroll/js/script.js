@@ -10,6 +10,7 @@ var s = skrollr.init({
 	}
 });
 
-// $("#down").click(function(){
-// 	skrollr.goTO
-// })
+$("#up").click(function (){
+	console.log($("#slide1").offset().top);
+	$("body").scrollTop($("#slide1").offset().top);
+});
