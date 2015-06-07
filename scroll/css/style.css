@@ -49,6 +49,10 @@ section {height: 100%; min-height: 100%;}
   width: 100%;
 }
 
+.disable{
+  opacity: 0;
+}
+
 /*
 Lista
 */
@@ -158,10 +162,6 @@ Botões de navegação
 
 #previous{
   top: 20px;
-}
-
-.disable{
-  opacity: 0;
 }
 
 /*
