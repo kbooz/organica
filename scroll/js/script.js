@@ -58,16 +58,16 @@ $sections.each(function(){ids.push($(this).attr("id"))})
 // 	}
 // );
 
-function disableButton($button){
-	$button.addClass("disable");
-	$button.off();
-}
-
-function activateButton($button,id){
-	$button.removeClass("disable");
-	$button.on("click",function(){
-		$('html, body').animate({scrollTop: $("#"+ids[currentId+id]).offset().top});
-	});
-}
-
-activateButton($nextButton,1);
+// function disableButton($button){
+// 	$button.addClass("disable");
+// 	$button.off();
+// }
+//
+// function activateButton($button,id){
+// 	$button.removeClass("disable");
+// 	$button.on("click",function(){
+// 		$('html, body').animate({scrollTop: $("#"+ids[currentId+id]).offset().top});
+// 	});
+// }
+//
+// activateButton($nextButton,1);
