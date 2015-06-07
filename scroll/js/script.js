@@ -1,12 +1,6 @@
 $("window,body,html").on("load",function(){window.scrollTo(0,0);})
 
-// var s = skrollr.init({
-// 	smoothScrolling: true,
-// 	forceHeight: true
-// 	// constants:{
-// 	// 	keyframe:keyf
-// 	// }
-// });
+var s = skrollr.init();
 
 //Navegação do site
 
