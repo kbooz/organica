@@ -30,7 +30,7 @@ $sections.waypoint(
 				//Desabilita o botão next
 				disableButton($nextButton);
 			}
-			if(currentId == 0)
+			if(currentId != 0)
 				activateButton($previousButton,-1);
 	  }
 	}, {
