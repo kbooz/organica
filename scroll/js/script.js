@@ -1,11 +1,13 @@
 //Posição inicial
 //window.onbeforeunload = function(){ window.scrollTo(0,0); }
 
-var s = skrollr.init({
-	// constants:{
-	// 	keyframe:keyf
-	// }
-});
+// var s = skrollr.init({
+// 	smoothScrolling: true,
+// 	forceHeight: true
+// 	// constants:{
+// 	// 	keyframe:keyf
+// 	// }
+// });
 
 //Navegação do site
 
@@ -28,7 +30,7 @@ $sections.waypoint(
 				//Desabilita o botão next
 				disableButton($nextButton);
 			}
-			if(currentId != 0)
+			if(currentId == 0)
 				activateButton($previousButton,-1);
 	  }
 	}, {
