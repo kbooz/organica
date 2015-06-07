@@ -5,9 +5,11 @@
 html, body {
   padding: 0;
   margin: 0;
-  height:100%;
+  /*height:100%;*/
   font-family: Verdana, Geneva, sans-serif;
 }
+
+main { height: 100%;  }
 
 section {height: 100%; min-height: 100%;}
 
@@ -48,6 +50,36 @@ section {height: 100%; min-height: 100%;}
 }
 
 /*
+Lista
+*/
+
+ul .checklist {
+    list-style: none;
+    padding:0;
+    margin:0;
+}
+
+.checklist li {
+  text-indent: -.7em;
+  list-style: none;
+  text-align: left;
+}
+
+.checklist li:before {
+  content: "• ";
+}
+
+.checklist .right:before {
+  content: "\2714  ";
+  color:green;
+}
+
+.checklist .wrong:before {
+  content: "\2718  ";
+  color:red;
+}
+
+/*
 
 Slides
 
@@ -66,10 +98,22 @@ Index
   color: #ebebeb;
 }
 
+/*
+Organico-beneficios
+*/
+
+#organico-beneficios .background{
+  background:#034;
+}
+
+#organico-beneficios .content{
+  color: #ebebeb;
+}
+
 
 /*
 
-Elementos da fruta
+Elementos da tela
 
 */
 
@@ -79,20 +123,63 @@ Geral
 
 */
 
-#fruta-container {
+#overflow-container {
   width: 100%;
+  height: 100%;
   top: 0px;
+  position: fixed;
+  text-align: center;
 }
 
+/*
+
+Botões de navegação
+
+*/
+
+#previous,#next{
+  position: fixed;
+  text-align: center;
+  left: 50%;
+  width: 60px;
+  padding: 20px 0;
+  margin-left: -30px;
+  z-index: 1000;
+  color: white;
+  font-weight: bolder;
+  font-size: 20px;
+  background: #4A4A4A;
+  border-radius: 60px;
+}
+
+#next{
+  bottom: 20px;
+}
+
+#previous{
+  top: 20px;
+}
+
+.disable{
+  opacity: 0;
+}
+
+/*
+
+Fruta
+
+*/
+
 #fruta {
-  position: absolute;
+  position: relative;
   background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;
   height: 200px;
   width: 200px;
+  margin-left: -100px;
+  left: 50%;
 }
-
 .laranja{
   background: url(../img/laranja_feliz.svg);
 }
