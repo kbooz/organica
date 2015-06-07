@@ -31,7 +31,7 @@ $sections.waypoint(
 				disableButton($nextButton);
 			}
 			if(currentId != 0)
-				activateButton($previousButton,-1);
+				activatePrevious();
 	  }
 	}, {
 	  offset: '25%'
@@ -49,7 +49,7 @@ $sections.waypoint(
 				//Desabilita o botão next
 				disableButton($previousButton);
 			}
-			activateButton($nextButton,1);
+			activateNext();
 	  }
 	}, {
 	  offset: function() {
@@ -63,11 +63,19 @@ function disableButton($button){
 	$button.off();
 }
 
-function activateButton($button,id){
-	$button.removeClass("disable");
-	$button.on("click",function(){
-		$('html, body').animate({scrollTop: $("#"+ids[currentId+id]).offset().top});
+function activateNext(){
+	$nextButton.removeClass("disable");
+	$nextButton.on("click",function(){
+		$('html, body').animate({scrollTop: $("#"+ids[currentId+1]).offset().top});
 	});
 }
 
-activateButton($nextButton,1);
+
+function activatePrevious(){
+	$previousButton.removeClass("disable");
+	$previousButton.on("click",function(){
+		$('html, body').animate({scrollTop: $("#"+ids[currentId-1]).offset().top});
+	});
+}
+
+activateNext();

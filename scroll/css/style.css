@@ -51,6 +51,7 @@ section {height: 100%; min-height: 100%;}
 
 .disable{
   opacity: 0;
+  display: none;
 }
 
 /*
