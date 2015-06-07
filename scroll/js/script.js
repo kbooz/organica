@@ -19,44 +19,44 @@ var $previousButton = $("#previous");
 
 $sections.each(function(){ids.push($(this).attr("id"))})
 
-$sections.waypoint(
-		function(direction) {
-	  if (direction === 'down') {
-			currentId = ids.indexOf(this.element.id);
-
-			//Checa se é o ultimo elemento do array
-			if(currentId == ids.length-1)
-			{
-				//Desabilita o botão next
-				disableButton($nextButton);
-			}
-			if(currentId != 0)
-				activateButton($previousButton,-1);
-	  }
-	}, {
-	  offset: '25%'
-	}
-);
-
-$sections.waypoint(
-		function(direction) {
-	  if (direction === 'up') {
-			currentId = ids.indexOf(this.element.id);
-
-			//Checa se é o primeiro elemento do array
-			if(currentId == 0)
-			{
-				//Desabilita o botão next
-				disableButton($previousButton);
-			}
-			activateButton($nextButton,1);
-	  }
-	}, {
-	  offset: function() {
-	    return -this.element.clientHeight*0.5;
-	  }
-	}
-);
+// $sections.waypoint(
+// 		function(direction) {
+// 	  if (direction === 'down') {
+// 			currentId = ids.indexOf(this.element.id);
+//
+// 			//Checa se é o ultimo elemento do array
+// 			if(currentId == ids.length-1)
+// 			{
+// 				//Desabilita o botão next
+// 				disableButton($nextButton);
+// 			}
+// 			if(currentId != 0)
+// 				activateButton($previousButton,-1);
+// 	  }
+// 	}, {
+// 	  offset: '25%'
+// 	}
+// );
+//
+// $sections.waypoint(
+// 		function(direction) {
+// 	  if (direction === 'up') {
+// 			currentId = ids.indexOf(this.element.id);
+//
+// 			//Checa se é o primeiro elemento do array
+// 			if(currentId == 0)
+// 			{
+// 				//Desabilita o botão next
+// 				disableButton($previousButton);
+// 			}
+// 			activateButton($nextButton,1);
+// 	  }
+// 	}, {
+// 	  offset: function() {
+// 	    return -this.element.clientHeight*0.5;
+// 	  }
+// 	}
+// );
 
 function disableButton($button){
 	$button.addClass("disable");
