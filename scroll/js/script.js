@@ -11,13 +11,13 @@ var s = skrollr.init({
 
 //Navegação do site
 
-var $sections = $("section");
-var ids = [];
-var currentId=0;
-var $nextButton = $("#next");
-var $previousButton = $("#previous");
-
-$sections.each(function(){ids.push($(this).attr("id"))})
+// var $sections = $("section");
+// var ids = [];
+// var currentId=0;
+// var $nextButton = $("#next");
+// var $previousButton = $("#previous");
+//
+// $sections.each(function(){ids.push($(this).attr("id"))})
 
 // $sections.waypoint(
 // 		function(direction) {
