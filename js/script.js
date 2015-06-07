@@ -1,15 +1,16 @@
+//Scroll para o topo - Repetido
 $("window,body,html").on("load",function(){window.scrollTo(0,0);})
 
-var s = skrollr.init({
-	smoothScrolling: true,
-	forceHeight: false
-	// constants:{
-	// 	keyframe:keyf
-	// }
+//ScrollMagic
+$(function() {
+	var controller = new ScrollMagic();
 });
 
-//Navegação do site
 
+
+
+
+//Navegação do site
 var $sections = $("section");
 var ids = [];
 var currentId=0;
