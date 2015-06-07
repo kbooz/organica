@@ -1,0 +1,107 @@
+/*
+  Configuraçoes gerais
+*/
+
+html, body {
+  padding: 0;
+  margin: 0;
+  height:100%;
+  font-family: Verdana, Geneva, sans-serif;
+  word-break: normal;
+}
+
+main { height: 100%;  }
+
+section {height: 100%; min-height: 100%;}
+
+.background {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100%;
+  min-height: 100%;
+  width: 100%;
+}
+
+.disable{
+  opacity: 0;
+  display: none;
+}
+
+/*
+Lista
+*/
+
+ul .checklist {
+    list-style: none;
+    padding:0;
+    margin:0;
+}
+
+.checklist li {
+  text-indent: -.7em;
+  list-style: none;
+  text-align: left;
+}
+
+.checklist li:before {
+  content: "• ";
+}
+
+.checklist .right:before {
+  content: "\2714  ";
+  color:green;
+}
+
+.checklist .wrong:before {
+  content: "\2718  ";
+  color:red;
+}
+
+
+/*
+Index
+*/
+
+#index .background{
+  background:#034;
+}
+
+#index .content{
+  color: #ebebeb;
+}
+
+/*
+Organico-beneficios
+*/
+
+#organico-beneficios .background{
+  background:#034;
+}
+
+#organico-beneficios .content{
+  color: #ebebeb;
+}
+
+
+/*
+
+Elementos da tela
+
+*/
+
+/*
+
+Geral
+
+*/
+
+#overflow-container {
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  position: fixed;
+  text-align: center;
+  z-index: 1000;
+}
