@@ -198,3 +198,115 @@ Respirando
     -ms-transform:  translate(0px,0px)  scaleX(1.00) scaleY(1.00) ;
   }
 }
+
+/*
+Waiting
+*/
+
+.waiting{
+  animation: waitingFrames ease-in-out 4s;
+  animation-iteration-count: infinite;
+  transform-origin: 50% 100%;
+  -webkit-animation: waitingFrames ease-in-out 4s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-transform-origin: 50% 100%;
+  -moz-animation: waitingFrames ease-in-out 4s;
+  -moz-animation-iteration-count: infinite;
+  -moz-transform-origin: 50% 100%;
+  -o-animation: waitingFrames ease-in-out 4s;
+  -o-animation-iteration-count: infinite;
+  -o-transform-origin: 50% 100%;
+  -ms-animation: waitingFrames ease-in-out 4s;
+  -ms-animation-iteration-count: infinite;
+  -ms-transform-origin: 50% 100%;
+}
+
+@keyframes waitingFrames{
+  0% {
+    transform:  translate(0px,0px)  rotate(0deg) ;
+  }
+  25% {
+    transform:  translate(0px,-6px)  rotate(6deg) ;
+  }
+  50% {
+    transform:  translate(0px,0px)  rotate(0deg) ;
+  }
+  75% {
+    transform:  translate(0px,-6px)  rotate(-6deg) ;
+  }
+  100% {
+    transform:  translate(0px,0px)  rotate(0deg) ;
+  }
+}
+
+@-moz-keyframes waitingFrames{
+  0% {
+    -moz-transform:  translate(0px,0px)  rotate(0deg) ;
+  }
+  25% {
+    -moz-transform:  translate(0px,-6px)  rotate(6deg) ;
+  }
+  50% {
+    -moz-transform:  translate(0px,0px)  rotate(0deg) ;
+  }
+  75% {
+    -moz-transform:  translate(0px,-6px)  rotate(-6deg) ;
+  }
+  100% {
+    -moz-transform:  translate(0px,0px)  rotate(0deg) ;
+  }
+}
+
+@-webkit-keyframes waitingFrames {
+  0% {
+    -webkit-transform:  translate(0px,0px)  rotate(0deg) ;
+  }
+  25% {
+    -webkit-transform:  translate(0px,-6px)  rotate(6deg) ;
+  }
+  50% {
+    -webkit-transform:  translate(0px,0px)  rotate(0deg) ;
+  }
+  75% {
+    -webkit-transform:  translate(0px,-6px)  rotate(-6deg) ;
+  }
+  100% {
+    -webkit-transform:  translate(0px,0px)  rotate(0deg) ;
+  }
+}
+
+@-o-keyframes waitingFrames {
+  0% {
+    -o-transform:  translate(0px,0px)  rotate(0deg) ;
+  }
+  25% {
+    -o-transform:  translate(0px,-6px)  rotate(6deg) ;
+  }
+  50% {
+    -o-transform:  translate(0px,0px)  rotate(0deg) ;
+  }
+  75% {
+    -o-transform:  translate(0px,-6px)  rotate(-6deg) ;
+  }
+  100% {
+    -o-transform:  translate(0px,0px)  rotate(0deg) ;
+  }
+}
+
+@-ms-keyframes waitingFrames {
+  0% {
+    -ms-transform:  translate(0px,0px)  rotate(0deg) ;
+  }
+  25% {
+    -ms-transform:  translate(0px,-6px)  rotate(6deg) ;
+  }
+  50% {
+    -ms-transform:  translate(0px,0px)  rotate(0deg) ;
+  }
+  75% {
+    -ms-transform:  translate(0px,-6px)  rotate(-6deg) ;
+  }
+  100% {
+    -ms-transform:  translate(0px,0px)  rotate(0deg) ;
+  }
+}
