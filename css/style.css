@@ -1,0 +1,11 @@
+
+.fruta {
+  height: 200px;
+  width: 200px;
+  margin: 10px 0 50px;
+}
+
+.img-responsive
+{
+  display: inline-block;
+}
